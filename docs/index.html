@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
@@ -19,13 +20,13 @@
       <meta name="DC.description" content="Hakyung Sung/" />
   <meta property="og:description" content="Hakyung Sung/" />
   <meta name="twitter:description" content="Hakyung Sung/" />
-          <meta property="og:image" content="./assets/images/icons8-duck-64.png" />
+          <meta property="og:image" content="./assets/images/pawprint.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:height" content="384" />
     <meta property="og:image:width" content="384" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/icons8-duck-64.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/icons8-duck-64.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/icons8-duck-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/pawprint.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/pawprint.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/pawprint.png">
   <link rel="manifest" href="./site.webmanifest">
   <link rel="mask-icon" href="./assets/images/icons8-duck-64.png">
   <meta name="msapplication-TileColor" content="#154733">
@@ -88,16 +89,30 @@
       vertical-align: -0.15em;
       margin-left: -0.36em;
       margin-right: -0.15em;
-    }
-              
+    }          
     .profile-picture {
-      width: 150px; /* Adjust the size as needed */
-      height: 150px; /* Adjust the size as needed */
+      width: 150px; /* Adjust as needed */
+      height: 150px; /* Adjust as needed */
       border-radius: 50%; /* Makes the image round */
       object-fit: cover; /* Ensures the image covers the area without distortion */
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      filter: grayscale(20%); /* Start with a mostly grayscale image */
+    }
+    .profile-picture:hover {
+      transform: scale(1.05); /* Slight zoom effect */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+      filter: grayscale(0%); /* Remove grayscale for full color */
+    }
+    /* Change all hyperlinked text color */
+    a {
+      color: #3743e8; /* Replace with your desired color */
+      transition: color 0.5s, text-decoration 0.5s; /* Optional: smooth transition */
+    }
+    a:hover {
+      text-decoration: none;
+      color: #ACA39A /* Replace with your desired hover color */
     }
   </style>
-
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -107,8 +122,10 @@
 <div id="cvBody" class="container">
     <div class="row align-items-start">
         <!-- Profile picture column -->
-        <div class="col-md-4 text-center" style="margin-top:30px;"> <!-- 'text-center' class added for mobile devices -->
-            <img src="./assets/images/IMG_4574.jpeg" alt="Hakyung Sung" class="profile-picture mx-auto d-block"> <!-- 'mx-auto d-block' classes ensure the image is centered -->
+        <div class="col-md-4 text-center" style="margin-top:30px;">
+          <a href="index.html" style="display:inline-block;">
+            <img src="./assets/images/IMG_4574.jpeg" alt="Hakyung Sung" class="profile-picture">
+          </a>
         </div>
         <!-- Contact information and name column -->
         <div class="col-md-8">
@@ -116,19 +133,19 @@
             <div class="row" style="display: flex; align-items: flex-start;"> <!-- Flexbox applied here for alignment -->
                 <!-- Address -->
                 <div class="col-md-6">
-                    <h2 style="color:#489D46;">Contact</h2>
-                    1600 Millrace Dr. #201<br />
-                    University of Oregon<br />
-                    Eugene, OR<br />
-                    hsung@uoregon.edu <br />
+                    <h2 style="color:#3a5e89;">Contact</h2>
+                    hksung001@gmail.com<br />
+                    <br />
+                    <br />
+                    <br />
                 </div>
                 <!-- Email and social links -->
                 <div class="col-md-6">
-                  <p style="margin-top:20px;"> <!-- Adjust margin-top to align with the title 'Contact' -->
+                  <p style="margin-top:25px;"> <!-- Adjust margin-top to align with the title 'Contact' -->
                       <i class="fas fa-file-alt" style="width: 20px; text-align: center;"></i> <a href="./assets/CV/Hakyung Sung CV.pdf" target="_blank">CV</a> <br />
                       <i class="fab fa-github" style="width: 20px; text-align: center;"></i> <a href="http://github.com/hksung" target="_blank">Github</a> <br />
                       <i class="fas fa-graduation-cap" style="width: 20px; text-align: center;"></i> <a href="https://scholar.google.com/citations?user=o-mWVF4AAAAJ&hl=en" target="_blank">Google Scholar</a> <br />
-                      
+                      <i class="fas fa-university" style="width: 20px; text-align: center;"></i> <a href="teaching.html">Teaching</a> <br />
                   </p>
               </div>
             </div>
@@ -136,26 +153,24 @@
     </div>
          
     <div>
-      <h2 id="interests" style="color:#489D46;">About Me</h2>
+      <h2 id="interests" style="color:#3a5e89;">About Me</h2>
       <p>
-        Hi! I am a PhD Candidate at the University of Oregon, working with <a href="https://kristopherkyle.github.io/professional-webpage/" target="_blank">Kris Kyle</a> in the Learner Corpus Research and Applied Data Science (<a href="https://lcr-ads-lab.github.io/LCR-ADS-Home/" target="_blank">LCR-ADS</a>) lab.<br><br>
-        I am interested in advancing applied linguistics research through computational analysis, particularly in exploring linguistic patterns in language production data. During my PhD, I have focused on a usage-based constructionist approach as a theoretical framework, developing/validating (lexico-)grammatical indices to measure language learners' productive language proficiency. Outside of my academic pursuits, my main passion is long-distance running.
-      </p>
+        Hi! I recently completed my Ph.D. in Linguistics at the University of Oregon, where I worked with <a href="https://kristopherkyle.github.io/professional-webpage/" target="_blank">Kris Kyle</a> in the Learner Corpus Research and Applied Data Science (<a href="https://lcr-ads-lab.github.io/LCR-ADS-Home/" target="_blank">LCR-ADS</a>) Lab. I’ve been especially interested in developing and validating lexicogrammatical indices to empirically evaluate second language learners’ productive proficiency. 
+        Outside of academia, I’m passionate about long-distance running. <br><br>In Fall 2025, I will join the Rochester Institute of Technology (Department of Psychology) as an Assistant Professor.</p>
     </div>
 
-    <h2 id="education"; style="color:#154733;">Education</h2>
+    <h2 id="education"; style="color:#3a5e89;">Education</h2>
     <p><ul>
-    <li><strong>University of Oregon</strong>, Linguistics, Ph.D., 2021.9-2025.6 (expected)</li> 
-    <ul>
-    <li>Concurrent M.S. in Computer Science, 2022.9-2024.12</li>
-    </ul></li>
-    <li><strong>Seoul National University</strong>, English Language Education, M.A., 2016.3-2018.2</li>
-    <li><strong>Ewha Womans University</strong>, English Language and Literature, B.A., 2011.3-2016.2</li>
+    <li><strong>University of Oregon</strong>, Linguistics PhD; Computer Science, MS, 2021.9–2025.6</li>
+    <li><strong>Seoul National University</strong>, English Language Education, MA, 2016.3-2018.2</li>
+    <li><strong>Ewha Womans University</strong>, English Language and Literature, BA, 2011.3-2016.2</li>
       </p>
       
-    <h2 id="Publications"; style="color:#154733;">Publications</h2>
-    <p><ul>
-      <li><strong>Sung, H.</strong>, & Shin, G-H. (2025). <a href="https://arxiv.org/pdf/2503.14718" target="_blank">Second language Korean Universal Dependency treebank v1.2: Focus on data augmentation and annotation scheme refinement</a>. In <em>Proceedings of the Workshop
+    <h2 id="Publications"; style="color:#3a5e89;">Publications</h2>
+      <li><strong>Sung, H.</strong>, & Kyle, K. (in press). Usage-based analysis of L2 oral proficiency: Characteristics of argument structure construction use. <em>Studies in Second Language Acquisition</em>.</li>        
+      <li><strong>Sung, H.</strong>, Csuros, K., & Sung, M-C. (in press). Comparing human and LLM proofreading in L2 writing: Impact on lexical and syntactic features. In <em>Proceedings of the 20th Workshop on Innovative Use of NLP for Building Educational Applications</em>.</li>    
+      <li><strong>Sung, H.</strong>, Shin, G-H., Lee, C., Sung, Y-K., & Jung, B-K. (in press). UD-KSL Treebank v1.3: A semi-automated framework for aligning XPOS-extracted units with UPOS tags. In <em>Proceedings of the 19th Linguistic Annotation Workshop (LAW-XIX)</em>.</li>
+      <li><strong>Sung, H.</strong>, & Shin, G-H. (2025). <a href="https://aclanthology.org/2025.resourceful-1.4/" target="_blank">Second language Korean Universal Dependency treebank v1.2: Focus on data augmentation and annotation scheme refinement</a>. In <em>Proceedings of the Workshop
         on Resources and Representations for Under-Resourced Languages and Domains (RESOURCEFUL-2025)</em>.</li>
       <li><strong>Sung, H.</strong>, & Kyle, K. (2024). <a href="https://aclanthology.org/2024.emnlp-main.415/" target="_blank">Leveraging pre-trained language models for linguistic analysis: A case of argument structure constructions</a>. In <em>the Association for Computational Linguistics: EMNLP 2024</em>.</li>
       <li><strong>Sung, H.</strong>, & Shin, G-H. (2024). <a href="https://aclanthology.org/2024.lrec-main.332/" target="_blank">Constructing a dependency treebank for second language learners of Korean</a>. In <em>LREC-COLING 2024</em>.</li> 
@@ -163,50 +178,40 @@
       <li><strong>Sung, H.</strong>, Cho, S., & Kyle, K. (2024). <a href="https://doi.org/10.1080/15434303.2024.2311728" target="_blank">An empirical evaluation of lexical diversity indices in L2 Korean writing assessment</a>. <em>Language Assessment Quarterly</em>, 1-22.</li>
       <li><strong>Sung, H.</strong>, & Shin, G-H. (2023). <a href="https://aclanthology.org/2023.findings-emnlp.767/" target="_blank">Diversifying language models for lesser-studied languages and language-usage contexts: A case of second language Korean</a>. In <em>Findings of the Association for Computational Linguistics: EMNLP 2023</em>.</li>
       <li>Kyle, K., <strong>Sung, H.</strong>, Eguchi, M., & Zenker, F. (2023). <a href="https://doi.org/10.1017/S0272263123000402" target="_blank">Evaluating evidence for the reliability and validity of lexical diversity indices in L2 oral task responses</a>. <em>Studies in Second Language Acquisition</em>, 1-22.</li>
-      <li><strong>Sung, H.</strong>, & Shin, G-H. (2023). <a href="https://aclanthology.org/2023.bea-1.6/" target="_blank">Towards L2-friendly pipelines for learner corpora: A case of written production by L2-Korean learners</a>. In <em>Proceedings the 18th Workshop on Innovative Use of NLP for Building Educational Applications</em>, 72-82, Association for Computational Linguistics.</li>    
+      <li><strong>Sung, H.</strong>, & Shin, G-H. (2023). <a href="https://aclanthology.org/2023.bea-1.6/" target="_blank">Towards L2-friendly pipelines for learner corpora: A case of written production by L2-Korean learners</a>. In <em>Proceedings of the 18th Workshop on Innovative Use of NLP for Building Educational Applications</em>, 72-82, Association for Computational Linguistics.</li>    
       <li>Kyle, K., & <strong>Sung, H.</strong> (2023). <a href="https://aclanthology.org/2023.cxgsnlp-1.7/" target="_blank">An argument structure construction treebank</a>. In <em>Proceedings of the Workshop on Construction Grammars and NLP</em>, 51–62, Association for Computational Linguistics.</li>
       <li><strong>Sung, H.</strong> (2019). Korean EFL learners’ processing of English caused-motion construction, <em>English Teaching, 74</em>(1), 49-73.</li>
       </ul></p>
 
-    <h2 id="honors-awards"; style="color:#154733;">Honors/Awards</h2>
-    <p><ul>
-      <li><em>Professional Development Graduate Scholarship</em> (2023), University of Oregon</li>
-      <li><em>Raymund Fellowship</em> (2021), University of Oregon</li>
-      <li><em>Promising Scholar Award</em> (2021), University of Oregon</li>
-      <li><em>Lockey Graduate Science Award</em> (2021), University of Oregon</li>
-      <li><em>Top-off Award in Linguistics Department</em> (2021), University of Oregon</li>
-      <li><em>Excellence of Academics</em> (2017), Seoul National University</li>
-      <li><em>Scholarship of Graduate Student Instructor</em> (2017), Seoul National University</li>
-      </ul></p>
-
-    <h2 id="research-grants"; style="color:#154733;">External Fellowships/Grants</h2>
+    <h2 id="research-grants"; style="color:#3a5e89;">External Fellowships/Grants</h2>
     <p><ul>
       <li><em>Harold Gulliksen Psychometric Research Fellowship</em> (PI), ETS, 2024.9-2025.6</li>
       <li><em>Korean Studies Grant</em> (co-researcher), The Academy of Korean Studies, 2024.2-2025.1</li>
     </ul></p>   
 
-    <h2 id="experience"; style="color:#154733;">Experience</h2>
+    <h2 id="experience"; style="color:#3a5e89;">Experience</h2>
     <p><ul>
       <li>Graduate Employee, UO Linguistics, 2022.9-2024.12</li>        
       <li>Summer Intern, ETS, 2024.6-2024.7</li>
       <li>Summer Intern, ACTFL, 2022.6-2022.8</li>
-      <li>Electronic Resources Student Assistant, UO Library, 2021.10-2022.9</li>
       <li>English Teacher, Daewon/Gyeonggi Foreign Language High Schools, 2018.3-2021.2</li>
       </ul>
     </p>
       
-    <h2 id="services"; style="color:#154733;">Services</h2>
+    <h2 id="services"; style="color:#3a5e89;">Services</h2>
     <p><ul>
       <li>Ad-hoc reviewer for peer-reviewed journals and academic conferences</li>
-      <li>Student Editorial Board Member, <em>Journal of Second Language Writing</em>, 2024.12-Current</li>
-      <li>Conference Committee, <a href="https://sites.google.com/view/aacl-2024/home?authuser=0AACL 2024" target="_blank">AACL 2024</a></li>
-      <li>Graduate Student Faculty Representative, UO Linguistics Dept., 2022.1-2023.6</li>
-      <li>Graduate Student Instructor, Seoul National University, 2017.3-2018.2</li></p>
+      <li>Editorial Board Member, <em>Journal of Second Language Writing</em>, 2024.12-Current</li>
+      <li>Conference Committee: <a href="https://sites.google.com/view/aacl-2024/home?authuser=0AACL 2024" target="_blank">AACL 2024</a></li>
+      <li>Program Committe: <a href="https://sig-edu.org/bea/2025" target="_blank">BEA</a> (2023-2025), <a href="https://sigann.github.io/LAW-XIX-2025/" target="_blank">LAW</a> (2025)</li>
+      </ul>
+    </p>
 
-    <h2 id="skills-certifications"; style="color:#154733;">Other Expertise</h2>
+    <h2 id="skills-certifications"; style="color:#3a5e89;">Other Expertise</h2>
     <p><ul>
-      <li>Applications of linguistic analysis tools: <a href="https://lcr-ads-lab.github.io/TAALED/" target="_blank">TAALED</a> (<a href="https://github.com/NLPxL2Korean/Korean-Lexical-Diversity/" target="_blank">K-TAALED</a>), <a href="https://lcr-ads-lab.github.io/LxGrTagger-Documentation/" target="_blank">LxGrTgr</a></li>
+      <li>Applications of linguistic analysis tools: <a href="https://lcr-ads-lab.github.io/LxGrTagger-Documentation/" target="_blank">LxGrTgr</a>, <a href="https://lcr-ads-lab.github.io/TAALED/" target="_blank">TAALED</a></li>
       <li>Treebank constructions: <a href="https://github.com/LCR-ADS-Lab/ASC-Treebank" target="_blank">ASC treebank</a>, <a href="https://github.com/UniversalDependencies/UD_Korean-KSL/tree/dev" target="_blank">UD-KSL-treebank</a></li>
+      <li>Python package: ASC analyzer
         </ul></p>
 
   </div> <!-- wrapper container -->
