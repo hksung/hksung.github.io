@@ -152,9 +152,23 @@
 }
 
 </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QCJKG4D939"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QCJKG4D939', {
+    'anonymize_ip': true,
+    'transport_type': 'beacon'
+  });
+</script>
+
 </head>
 <body>
         <!-- no navbar. -->
@@ -185,10 +199,52 @@
                 <!-- Email and social links -->
                 <div class="col-md-6">
                   <p style="margin-top:25px;"> <!-- Adjust margin-top to align with the title 'Contact' -->
-                      <i class="fas fa-file-alt" style="width: 20px; text-align: center;"></i> <a href="./assets/CV/Hakyung Sung CV.pdf" target="_blank">CV</a> <br />
-                      <i class="fab fa-github" style="width: 20px; text-align: center;"></i> <a href="http://github.com/hksung" target="_blank">Github</a> <br />
-                      <i class="fas fa-graduation-cap" style="width: 20px; text-align: center;"></i> <a href="https://scholar.google.com/citations?user=o-mWVF4AAAAJ&hl=en" target="_blank">Google Scholar</a> <br />
-                      <i class="fas fa-university" style="width: 20px; text-align: center;"></i> <a href="teaching.html">Teaching</a> <br />
+                    <i class="fas fa-file-alt" style="width: 20px; text-align: center;"></i> 
+                    <a href="./assets/CV/Hakyung Sung CV.pdf"
+                      target="_blank"
+                      onclick="gtag('event', 'click_cv', {
+                        'event_category': 'outbound',
+                        'event_label': 'CV PDF',
+                        'link_url': this.href
+                      });">
+                      CV
+                    </a>
+                    <br />
+
+                    <i class="fab fa-github" style="width: 20px; text-align: center;"></i> 
+                    <a href="http://github.com/hksung"
+                      target="_blank"
+                      onclick="gtag('event', 'click_github', {
+                        'event_category': 'outbound',
+                        'event_label': 'GitHub Profile',
+                        'link_url': this.href
+                      });">
+                      Github
+                    </a>
+                    <br />
+
+                    <i class="fas fa-graduation-cap" style="width: 20px; text-align: center;"></i> 
+                    <a href="https://scholar.google.com/citations?user=o-mWVF4AAAAJ&hl=en"
+                      target="_blank"
+                      onclick="gtag('event', 'click_scholar', {
+                        'event_category': 'outbound',
+                        'event_label': 'Google Scholar',
+                        'link_url': this.href
+                      });">
+                      Google Scholar
+                    </a>
+                    <br />
+
+                    <i class="fas fa-university" style="width: 20px; text-align: center;"></i> 
+                    <a href="teaching.html"
+                      onclick="gtag('event', 'click_teaching', {
+                        'event_category': 'navigation',
+                        'event_label': 'Teaching Page',
+                        'link_url': this.href
+                      });">
+                      Teaching
+                    </a>
+                    <br />
                   </p>
               </div>
             </div>
