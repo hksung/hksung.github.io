@@ -121,13 +121,18 @@
       }
       th {
         border-bottom: none;
-        padding-top: 14px;
         padding-bottom: 8px;
         white-space: normal;
       }
       td {
         padding-top: 2px;
         padding-bottom: 8px;
+      }
+      tbody tr:first-child th {
+        padding-top: 14px;
+      }
+      tbody tr + tr th {
+        padding-top: 8px;
       }
     }
   </style>
