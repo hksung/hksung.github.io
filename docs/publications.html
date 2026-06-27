@@ -10,12 +10,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="./assets/js/theme.js"></script>
   <style>
     body {
       font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 10.5pt;
+      font-size: 11.5pt;
     }
     /* Narrower, more readable content width on larger screens */
     .container {
@@ -26,10 +26,10 @@
       margin-top: 20px;
       margin-bottom: 20px;
       text-align: center;
-      font-size: 18pt;
+      font-size: 20pt;
     }
     h2 {
-      font-size: 13pt;
+      font-size: 14pt;
       font-weight: bold;
       margin-top: 30px;
       margin-bottom: 15px;
@@ -49,6 +49,9 @@
       text-align: left;
       color: #7C878E;
       white-space: nowrap;
+    }
+    td {
+      font-family: "DM Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     td ul {
       list-style: none;
@@ -96,14 +99,22 @@
     }
     /* Style for the Go Back button */
     .back-button {
-      position: absolute;
-      top: 22px;
-      left: 25px;
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      z-index: 20;
     }
     .btn-custom {
-      background-color: #fff;
-      border-color: #000;
-      color: #000;
+      display: inline-flex !important;
+      align-items: center !important;
+      border-radius: 999px !important;
+      border: 1px solid var(--switch-border) !important;
+      background: var(--switch-bg) !important;
+      color: var(--switch-text) !important;
+      backdrop-filter: blur(6px);
+      font-size: 8.5pt !important;
+      line-height: 1 !important;
+      padding: 4px 12px !important;
     }
     a {
       color: #3743e8;
