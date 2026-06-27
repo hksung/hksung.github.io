@@ -20,29 +20,36 @@
       <meta name="DC.description" content="Hakyung Sung/" />
   <meta property="og:description" content="Hakyung Sung/" />
   <meta name="twitter:description" content="Hakyung Sung/" />
-          <meta property="og:image" content="./assets/images/pawprint.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:height" content="384" />
-    <meta property="og:image:width" content="384" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/pawprint.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/pawprint.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/pawprint.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/globe.svg">
+  <link rel="icon" type="image/svg+xml" href="./assets/images/globe.svg">
+  <link rel="icon" type="image/svg+xml" href="./assets/images/globe.svg">
   <link rel="manifest" href="./site.webmanifest">
-  <link rel="mask-icon" href="./assets/images/icons8-duck-64.png">
+  <link rel="mask-icon" href="./assets/images/globe.svg" color="#000000">
   <meta name="msapplication-TileColor" content="#D7D2CB">
   <meta name="theme-color" content= "#D7D2CB">
   <title>Hakyung Sung</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
    <link rel="stylesheet" href="./assets/css/cv.css">
-          <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+          <script src="./assets/js/theme.js"></script>
     <style>
-      body {font-family: "monospace", menlo; font-size: 11pt}
+      body {font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10.5pt}
     </style>
-            <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
     <style>
-      h1 {margin-top: 20px; margin-bottom: 10px; font-family: "monospace", menlo; font-size: 18pt; text-align: center}
-      h2,h3,h4,h5,h6 {font-family: "monospace", menlo; font-size: 11pt; font-weight: bold}
+      h1 {margin-top: 20px; margin-bottom: 10px; font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 17pt; font-weight: 700; text-align: center}
+      h2,h3,h4,h5,h6 {font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11pt; font-weight: 700}
+    </style>
+    <style>
+      /* Add breathing room at the top on desktop so the content isn't stuck up high.
+         Keep normal flow on mobile. */
+      @media (min-width: 768px) {
+        #cvBody {
+          padding-top: 8vh;
+        }
+      }
     </style>
             <style>
                         
@@ -69,7 +76,15 @@
     #cvBody ul>li>ul>li>ul>li:before {
       content: "*";
     }
-  
+
+    #cvBody ul.no-marker li {
+      padding-left: 0;
+    }
+
+    #cvBody ul.no-marker li:before {
+      display: none;
+    }
+
     .latex sub, .latex sup {
       text-transform: uppercase;
     }
@@ -95,13 +110,7 @@
       height: 150px; /* Adjust as needed */
       border-radius: 50%; /* Makes the image round */
       object-fit: cover; /* Ensures the image covers the area without distortion */
-      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-      filter: grayscale(20%); /* Start with a mostly grayscale image */
-    }
-    .profile-picture:hover {
-      transform: scale(1.05); /* Slight zoom effect */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-      filter: grayscale(0%); /* Remove grayscale for full color */
+
     }
     /* Change all hyperlinked text color */
     a {
@@ -112,46 +121,8 @@
       text-decoration: none;
       color: #ACA39A /* Replace with your desired hover color */
     }
-    .flip-box {
-      perspective: 1000px;
-      width: 150px;
-      height: 150px;
-      margin: 0 auto;
-    }
-
-    .flip-box-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-      transition: transform 0.8s;
-    }
-
-    .flip-box-front,
-    .flip-box-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-    }
-
-    .flip-box-front img,
-    .flip-box-back img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .flip-box-back {
-      transform: rotateY(180deg);
-    }
-
-    .flipped .flip-box-inner {
-      transform: rotateY(180deg);
-}
-
 </style>
+<link rel="stylesheet" href="./assets/css/theme.css">
 <!--[if lt IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
 <![endif]-->
@@ -171,21 +142,13 @@
 
 </head>
 <body>
+<button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">Dark</button>
         <!-- no navbar. -->
 <div id="cvBody" class="container">
     <div class="row align-items-start">
         <!-- Profile picture column -->
         <div class="col-md-4 text-center" style="margin-top:30px;">
-          <div id="flipBox" class="flip-box" onclick="flipProfile()">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="./assets/images/image4.jpg" alt="Hakyung Sung" class="profile-picture">
-              </div>
-              <div class="flip-box-back">
-                <img src="./assets/images/image1.jpeg" alt="Alternate Hakyung" class="profile-picture">
-              </div>
-            </div>
-          </div>
+          <img src="./assets/images/image4.jpg" alt="Hakyung Sung" class="profile-picture">
         </div>
         <!-- Contact information and name column -->
         <div class="col-md-8">
@@ -193,8 +156,8 @@
             <div class="row" style="display: flex; align-items: flex-start;"> <!-- Flexbox applied here for alignment -->
                 <!-- Address -->
                 <div class="col-md-6">
-                    <h2 style="color:#3a5e89;">Contact</h2>
-                    hksung001 [at] gmail [dot] com<br />
+                    <h2 style="color:#3a5e89;">Contact</h2><br/>
+                    sungh [at] hawaii [dot] edu<br />
                 </div>
                 <!-- Email and social links -->
                 <div class="col-md-6">
@@ -211,18 +174,6 @@
                     </a>
                     <br />
 
-                    <i class="fab fa-github" style="width: 20px; text-align: center;"></i> 
-                    <a href="http://github.com/hksung"
-                      target="_blank"
-                      onclick="gtag('event', 'click_github', {
-                        'event_category': 'outbound',
-                        'event_label': 'GitHub Profile',
-                        'link_url': this.href
-                      });">
-                      Github
-                    </a>
-                    <br />
-
                     <i class="fas fa-graduation-cap" style="width: 20px; text-align: center;"></i> 
                     <a href="https://scholar.google.com/citations?user=o-mWVF4AAAAJ&hl=en"
                       target="_blank"
@@ -232,6 +183,17 @@
                         'link_url': this.href
                       });">
                       Google Scholar
+                    </a>
+                    <br />
+
+                    <i class="fas fa-book" style="width: 20px; text-align: center;"></i> 
+                    <a href="publications.html"
+                      onclick="gtag('event', 'click_publications', {
+                        'event_category': 'navigation',
+                        'event_label': 'Publications Page',
+                        'link_url': this.href
+                      });">
+                      Publications
                     </a>
                     <br />
 
@@ -254,48 +216,48 @@
     <div>
       <h2 id="interests" style="color:#3a5e89;">About Me</h2>
       <p>
-      I am an Assistant Professor with a joint appointment in the <a href="https://www.rit.edu/liberalarts/department-psychology" target="_blank">Departments of Psychology</a> and <a href="https://www.rit.edu/liberalarts/department-modern-languages-and-cultures" target="_blank">Modern Languages and Cultures</a> at the Rochester Institute of Technology. Beginning in August 2026, I will join the University of Hawaiʻi at Mānoa as an incoming faculty member in the Department of <a href="https://www.hawaii.edu/sls/" target="_blank">Second Language Studies</a>.</br></br>
+      I will soon be joining the Department of <a href="https://www.hawaii.edu/sls/" target="_blank">Second Language Studies</a> at the University of Hawaiʻi at Mānoa as an Assistant Professor.</br></br>
+
       My research lies at the intersection of applied and computational linguistics, where I explore lexicogrammatical complexity and sophistication in second language production through NLP-based corpus analysis. To support this work, I construct annotated treebanks and evaluate language models for their accuracy in tagging and parsing linguistic features. I am also interested in leveraging large language models to enhance linguistic annotation and analyze learner language.
       </p>
     </div>
 
     <h2 id="education"; style="color:#3a5e89;">Education</h2>
     <p><ul>
-    <li><strong>University of Oregon</strong>, Linguistics, PhD; Computer Science, MS, 2021.9–2025.6</li>
-    <li><strong>Seoul National University</strong>, English Language Education, MA, 2016.3-2018.2</li>
-    <li><strong>Ewha Womans University</strong>, English Language and Literature, BA, 2011.3-2016.2</li>
+    <li><strong>University of Oregon</strong>, PhD in Linguistics and MS in Computer Science, 2021.9–2025.6</li>
+    <li><strong>Seoul National University</strong>, MA in English Language Education, 2016.3-2018.2</li>
+    <li><strong>Ewha Womans University</strong>, BA in English Language and Literature, 2011.3-2016.2</li>
       </p>
-      
-    <h2 id="Publications"; style="color:#3a5e89;">Publications</h2>
-      <li><strong>Sung, H.</strong>, Shin, G-H., Jung, B-K., & Shin, J-E. (<em>to appear</em>). L2K-ARG: Introducing and Evaluating a Learner Corpus of Korean Argumentative Writing. <em>International Journal of Learner Corpus Research</em>.</li>
-      <li>Kyle, K., & <strong>Sung, H.</strong> (<em>to appear</em>). Tagging and Parsing. <em>International Encyclopedia of Language and Linguistics</em> (3rd ed.).</li>
-      <li><strong>Sung, H.</strong>, & Shin, G-H. (<em>to appear</em>). <a href="https://arxiv.org/abs/2605.06625" target="_blank">Parser agreement and disagreement in L2 Korean UD: Implications for human-in-the-loop annotation</a>. In <em>Proceedings of the 20th Linguistic Annotation Workshop (LAW-XX)</em>.</li>
-      <li><strong>Sung, H.</strong>, & Kyle, K. (2025). <a href="https://aclanthology.org/2025.cxgsnlp-1.5/" target="_blank">ASC analyzer: A Python package for measuring argument structure construction usage in English texts</a>. In <em>Proceedings of the Second Workshop on Construction Grammars and NLP</em>, 41–49, Association for Computational Linguistics.</li>
-      <li><strong>Sung, H.</strong>, & Shin, G-H. (2025). <a href="https://dl.acm.org/doi/10.1145/3767330" target="_blank">Towards robust morphosyntactic analysis of L2 Korean: Evaluating and fine-tuning a Korean language model</a>. <em>Transactions on Asian and Low-Resource Language Information Processing</em>.</li>
-      <li><strong>Sung, H.</strong>, & Wolf, MK., Suhan, M., & Kyle, K. (2025). <a href="https://doi.org/10.1016/j.asw.2025.100975" target="_blank">Lexical richness in young English learners’ writing: A focus on opinion and listen-write task types</a>. <em>Assessing Writing</em>.</li>
-      <li><strong>Sung, H.</strong>, & Kyle, K. (2025). <a href="https://doi.org/10.1017/S0272263125100995" target="_blank">Usage-based analysis of L2 oral proficiency: Characteristics of argument structure construction use</a>. <em>Studies in Second Language Acquisition</em>.</li>        
-      <li><strong>Sung, H.</strong>, Csuros, K., & Sung, M-C. (2025). <a href="https://aclanthology.org/2025.bea-1.2/" target="_blank">Comparing human and LLM proofreading in L2 writing: Impact on lexical and syntactic features</a>. In <em>Proceedings of the 20th Workshop on Innovative Use of NLP for Building Educational Applications</em>.</li>    
-      <li><strong>Sung, H.</strong>, Shin, G-H., Lee, C., Sung, Y-K., & Jung, B-K. (2025). <a href="https://aclanthology.org/2025.law-1.9/" target="_blank">UD-KSL Treebank v1.3: A semi-automated framework for aligning XPOS-extracted units with UPOS tags</a>. In <em>Proceedings of the 19th Linguistic Annotation Workshop (LAW-XIX)</em>.</li>
-      <li><strong>Sung, H.</strong>, & Shin, G-H. (2025). <a href="https://aclanthology.org/2025.resourceful-1.4/" target="_blank">Second language Korean Universal Dependency treebank v1.2: Focus on data augmentation and annotation scheme refinement</a>. In <em>Proceedings of the Workshop
-        on Resources and Representations for Under-Resourced Languages and Domains (RESOURCEFUL-2025)</em>.</li>
-      <li><strong>Sung, H.</strong>, & Kyle, K. (2024). <a href="https://aclanthology.org/2024.emnlp-main.415/" target="_blank">Leveraging pre-trained language models for linguistic analysis: A case of argument structure constructions</a>. In <em>the Association for Computational Linguistics: EMNLP 2024</em>.</li>
-      <li><strong>Sung, H.</strong>, & Shin, G-H. (2024). <a href="https://aclanthology.org/2024.lrec-main.332/" target="_blank">Constructing a dependency treebank for second language learners of Korean</a>. In <em>LREC-COLING 2024</em>.</li> 
-      <li><strong>Sung, H.</strong>, & Kyle, K. (2024). <a href="https://aclanthology.org/2024.law-1.2/" target="_blank">Annotation scheme for English argument structure constructions treebank</a>. In <em>Proceedings of the 18th Linguistic Annotation Workshop (LAW-XVIII)</em>.</li>
-      <li><strong>Sung, H.</strong>, Cho, S., & Kyle, K. (2024). <a href="https://doi.org/10.1080/15434303.2024.2311728" target="_blank">An empirical evaluation of lexical diversity indices in L2 Korean writing assessment</a>. <em>Language Assessment Quarterly</em>, 1-22.</li>
-      <li><strong>Sung, H.</strong>, & Shin, G-H. (2023). <a href="https://aclanthology.org/2023.findings-emnlp.767/" target="_blank">Diversifying language models for lesser-studied languages and language-usage contexts: A case of second language Korean</a>. In <em>Findings of the Association for Computational Linguistics: EMNLP 2023</em>.</li>
-      <li>Kyle, K., <strong>Sung, H.</strong>, Eguchi, M., & Zenker, F. (2023). <a href="https://doi.org/10.1017/S0272263123000402" target="_blank">Evaluating evidence for the reliability and validity of lexical diversity indices in L2 oral task responses</a>. <em>Studies in Second Language Acquisition</em>, 1-22.</li>
-      <li><strong>Sung, H.</strong>, & Shin, G-H. (2023). <a href="https://aclanthology.org/2023.bea-1.6/" target="_blank">Towards L2-friendly pipelines for learner corpora: A case of written production by L2-Korean learners</a>. In <em>Proceedings of the 18th Workshop on Innovative Use of NLP for Building Educational Applications</em>, 72-82, Association for Computational Linguistics.</li>    
-      <li>Kyle, K., & <strong>Sung, H.</strong> (2023). <a href="https://aclanthology.org/2023.cxgsnlp-1.7/" target="_blank">An argument structure construction treebank</a>. In <em>Proceedings of the Workshop on Construction Grammars and NLP</em>, 51–62, Association for Computational Linguistics.</li>
-      <li><strong>Sung, H.</strong> (2019). Korean EFL learners’ processing of English caused-motion construction, <em>English Teaching, 74</em>(1), 49-73.</li>
-      </ul></p>
 
-    <h2 id="skills-certifications"; style="color:#3a5e89;">Other Scholarly Outputs</h2>
-    <p><ul>
-      <li>Linguistic analysis tools: <a href="https://huggingface.co/spaces/hksung/ASC_tagger_V2" target="_blank">ASC tagger</a>, <a href="https://github.com/hksung/ASC-analyzer" target="_blank">ASC analyzer</a>, <a href="https://github.com/hksung/Korean-lexical-complexity-analyzer" target="_blank">Korean lexical complexity analyzer</a></li> 
-      <li>Treebanks: <a href="https://github.com/LCR-ADS-Lab/ASC-Treebank" target="_blank">ASC treebank</a>, <a href="https://github.com/UniversalDependencies/UD_Korean-KSL/tree/dev" target="_blank">UD KSL treebank</a></li>
-      <li>Pretty docs: <a href="https://lcr-ads-lab.github.io/LxGrTagger-Documentation/" target="_blank">LxGrTgr</a>, <a href="https://lcr-ads-lab.github.io/TAALED/" target="_blank">TAALED</a></li>
-      </ul></p>
-
+    <h2 id="skills-certifications" style="color:#3a5e89;">Misc.</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="padding-right: 1rem; vertical-align: top;">Corpus</th>
+          <td>
+            <ul class="no-marker" style="list-style:none; padding:0; margin:0;">
+              <li><a href="https://github.com/NLPxL2Korean/L2K-ARG" target="_blank">L2K-ARG</a></li>
+            </ul>
+          </td>
+        </tr>        
+        <tr>
+          <th style="padding-right: 1rem; vertical-align: top;">NLP tools</th>
+          <td>
+            <ul class="no-marker" style="list-style:none; padding:0; margin:0;">
+              <li><a href="https://huggingface.co/spaces/hksung/ASC_tagger_V2" target="_blank">ASC tagger</a>, <a href="https://github.com/hksung/ASC-analyzer" target="_blank">ASC analyzer</a>, <a href="https://github.com/hksung/Korean-lexical-complexity-analyzer" target="_blank">Korean lexical complexity analyzer</a></li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th style="padding-right: 1rem; vertical-align: top;">Treebanks</th>
+          <td>
+            <ul class="no-marker" style="list-style:none; padding:0; margin:0;">
+              <li><a href="https://github.com/LCR-ADS-Lab/ASC-Treebank" target="_blank">ASC treebank</a>, <a href="https://github.com/UniversalDependencies/UD_Korean-KSL/tree/dev" target="_blank">UD KSL treebank</a></li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div> <!-- wrapper container -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -303,11 +265,5 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
   <script src="./assets/js/cv.js"></script>
 </body>
-
-<script>
-  function flipProfile() {
-    document.getElementById('flipBox').classList.toggle('flipped');
-  }
-</script>
 
 </html>

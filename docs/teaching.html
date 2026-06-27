@@ -4,14 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Hakyung Sung" />
+  <meta name="theme-color" content="#ffffff">
   <title>Teaching - Hakyung Sung</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/globe.svg">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="./assets/js/theme.js"></script>
   <style>
     body {
-      font-family: "monospace", menlo;
-      font-size: 11pt;
-    }
-    h1 {
+      font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 10.5pt;
+    }    /* Narrower, more readable content width on larger screens */
+    .container {
+      max-width: 880px;
+    }    h1 {
       margin-top: 20px;
       margin-bottom: 20px;
       text-align: center;
@@ -40,27 +48,55 @@
     /* Style for the Go Back button */
     .back-button {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 22px;
+      left: 25px;
     }
     .btn-custom {
-    background-color: 
-    #403e3e; /* Replace with your desired color */
-    border-color: 
-    #403e3e;
-    color: #fff; /* Adjust text color as needed */
+      background-color: #fff;
+      border-color: #000;
+      color: #000;
     }
     a {
-      color: #ACA39A; 
-      transition: color 0.5s, text-decoration 0.5s; /* Optional: smooth transition */
+      color: #3743e8;
+      transition: color 0.5s, text-decoration 0.5s;
     }
     a:hover {
       text-decoration: none;
-      color: #3a5e89; 
-    }    
+      color: #3743e8;
+    }
+  </style>
+  <link rel="stylesheet" href="./assets/css/theme.css">
+  <style>
+    :root {
+      /* default link colors for light background */
+      --teaching-link-color-light: #0c0359;
+      --teaching-link-hover-light: #292929;
+      /* default link colors for dark background */
+      --teaching-link-color-dark: #f9f5e6;
+      --teaching-link-hover-dark: #ffffff;
+    }
+
+    /* Apply teaching page link colors, but exclude Bootstrap/utility buttons (.btn) */
+    body a:not(.btn) {
+      color: var(--teaching-link-color-dark) !important;
+      text-decoration: none !important;
+    }
+
+    body a:not(.btn):hover {
+      color: var(--teaching-link-hover-dark) !important;
+    }
+
+    html:not([data-theme="dark"]) body a:not(.btn) {
+      color: var(--teaching-link-color-light) !important;
+    }
+
+    html:not([data-theme="dark"]) body a:not(.btn):hover {
+      color: var(--teaching-link-hover-light) !important;
+    }
   </style>
 </head>
 <body>
+    <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">Dark</button>
     <div class="container" style="position: relative;">
     <!-- Small Go Back Button at Top Left -->
     <div class="back-button">
@@ -69,6 +105,15 @@
     <h1 id="Teaching"; style="color:#000000;">Teaching</h1>
     <table>
       <tbody>
+        <tr>
+          <th>
+            Fall 2026<br>
+            <small>@ UH</small>
+          </th>
+          <td>
+            <p>SLS-775</a> Natural Language Processing in Corpus Research</p>
+          </td>
+        </tr>         
         <tr>
           <th>
             Spring 2026<br>
