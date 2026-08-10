@@ -98,31 +98,50 @@
     color: var(--tag-chapter-text);
     }
     .request-link {
-      border: 1px solid var(--tag-journal-text);
-      background: var(--tag-journal-bg);
+      border: none;
+      background: #f5caca;
       color: var(--tag-journal-text) !important;
+      font-weight: 700;
       text-decoration: none;
     }
     .request-link:hover {
       background: var(--tag-journal-text);
       color: var(--tag-journal-bg) !important;
     }
+    html[data-theme="dark"] .request-link {
+      background: #6a2f2f;
+      color: #efe4e4 !important;
+    }
+    html[data-theme="dark"] .request-link:hover {
+      background: #efe4e4;
+      color: #4a1f1f !important;
+    }
     .tag-chapter + .request-link {
-      border: 1px solid var(--tag-chapter-text);
-      background: var(--tag-chapter-bg);
+      border: none;
+      background: #e8dddd;
       color: var(--tag-chapter-text) !important;
     }
     .tag-chapter + .request-link:hover {
       background: var(--tag-chapter-text);
       color: var(--tag-chapter-bg) !important;
     }
+    html[data-theme="dark"] .tag-chapter + .request-link {
+      background: #575050;
+      color: #ebe5e5 !important;
+    }
+    html[data-theme="dark"] .tag-chapter + .request-link:hover {
+      background: #ebe5e5;
+      color: #3a3434 !important;
+    }
     .tag-oa {
-      background-color: #e8f3ec;
-      color: #2f5f47;
+      background-color: transparent;
+      border: 1px solid #8b939b;
+      color: #2e3338;
     }
     html[data-theme="dark"] .tag-oa {
-      background-color: #1f3a2d;
-      color: #b7d8c2;
+      background-color: transparent;
+      border-color: #76808a;
+      color: #d6dbe1;
     }
     /* Style for the Go Back button */
     .back-button {
