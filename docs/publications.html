@@ -97,6 +97,33 @@
     background-color: var(--tag-chapter-bg);
     color: var(--tag-chapter-text);
     }
+    .request-link {
+      border: 1px solid var(--tag-journal-text);
+      background: var(--tag-journal-bg);
+      color: var(--tag-journal-text) !important;
+      text-decoration: none;
+    }
+    .request-link:hover {
+      background: var(--tag-journal-text);
+      color: var(--tag-journal-bg) !important;
+    }
+    .tag-chapter + .request-link {
+      border: 1px solid var(--tag-chapter-text);
+      background: var(--tag-chapter-bg);
+      color: var(--tag-chapter-text) !important;
+    }
+    .tag-chapter + .request-link:hover {
+      background: var(--tag-chapter-text);
+      color: var(--tag-chapter-bg) !important;
+    }
+    .tag-oa {
+      background-color: #e8f3ec;
+      color: #2f5f47;
+    }
+    html[data-theme="dark"] .tag-oa {
+      background-color: #1f3a2d;
+      color: #b7d8c2;
+    }
     /* Style for the Go Back button */
     .back-button {
       position: fixed;
@@ -167,12 +194,12 @@
           <th>2026</th>
           <td>
             <ul>
-              <li>Diantoro, C., <strong>Sung, H.</strong>, Baese-Berk, M. (2026). <a href="https://journals.sagepub.com/doi/10.1177/00238309261472885" target="_blank">L1 framing typology and acoustic differences in L2 speech: Insights from Motion Constructions</a>. <em>Language and Speech</em>.<br><span class="tag tag-journal">Journal article</span></li>
-              <li><strong>Sung, H.</strong>, Shin, G-H., Jung, B-K., & Shin, J-E. (2026). <a href="https://benjamins.com/catalog/ijlcr.26007.sun" target="_blank">L2K-ARG: Introducing and Evaluating a Learner Corpus of Korean Argumentative Writing</a>. <em>International Journal of Learner Corpus Research</em>.<br><span class="tag tag-journal">Journal article</span></li>
-              <li>Kang, S., Sung, M-C., & <strong>Sung, H.</strong> (2026). <a href="https://onlinelibrary.wiley.com/doi/10.1111/ijal.70275" target="_blank">Exploring the impact of AI-Driven writing tutor chatbots on adolescent L2 writers’ revision and editing: A complexity, cohesion, and accuracy analysis</a>. <em>International Journal of Applied Linguistics</em>.<br><span class="tag tag-journal">Journal article</span></li>
+              <li><strong>Sung, H.</strong>, Shin, G-H., Jung, B-K., & Shin, J-E. (2026). <a href="https://benjamins.com/catalog/ijlcr.26007.sun" target="_blank">L2K-ARG: Introducing and Evaluating a Learner Corpus of Korean Argumentative Writing</a>. <em>International Journal of Learner Corpus Research</em>.<br><span class="tag tag-journal">Journal article</span> <a class="tag request-link" href="https://www.researchgate.net/publication/411036996_L2K-ARG_Introducing_and_evaluating_a_learner_corpus_of_Korean_argumentative_writing" target="_blank" rel="noopener noreferrer">Full access</a></li>              
+              <li>Diantoro, C., <strong>Sung, H.</strong>, Baese-Berk, M. (2026). <a href="https://journals.sagepub.com/doi/10.1177/00238309261472885" target="_blank">L1 framing typology and acoustic differences in L2 speech: Insights from Motion Constructions</a>. <em>Language and Speech</em>.<br><span class="tag tag-journal">Journal article</span> <a class="tag request-link" href="https://www.researchgate.net/publication/411838011_L1_Framing_Typology_and_Acoustic_Differences_in_L2_Speech_Insights_From_Motion_Constructions" target="_blank" rel="noopener noreferrer">Full access</a></li>
+              <li>Kang, S., Sung, M-C., & <strong>Sung, H.</strong> (2026). <a href="https://onlinelibrary.wiley.com/doi/10.1111/ijal.70275" target="_blank">Exploring the impact of AI-Driven writing tutor chatbots on adolescent L2 writers’ revision and editing: A complexity, cohesion, and accuracy analysis</a>. <em>International Journal of Applied Linguistics</em>.<br><span class="tag tag-journal">Journal article</span> <span class="tag tag-oa">Open access</span></li>
               <li><strong>Sung, H.</strong>, & Shin, G-H. (2026). <a href="https://arxiv.org/abs/2605.06625" target="_blank">Parser agreement and disagreement in L2 Korean UD: Implications for human-in-the-loop annotation</a>. In <em>Proceedings of the 20th Linguistic Annotation Workshop (LAW-XX)</em>.<br><span class="tag tag-proc">Conference paper</span></li>              
               <li>Mattu, K., Dhall, A., Naguru, A., Sehgal, S., Gowda, T., & <strong>Sung, H.</strong> (2026). <a href="https://aclanthology.org/2026.bea-1.69/" target="_blank">SAAKTH at BEA 2026 Shared Task 1: L1-Aware English Vocabulary Difficulty Prediction with Hybrid Transformer and Psycholinguistic Features</a>. In <em>Proceedings of the 21st Workshop on Innovative Use of NLP for Building Educational Applications</em>.<br><span class="tag tag-proc">Conference paper</span></li>
-              <li>Kyle, K., & <strong>Sung, H.</strong> (2026). <a href="https://doi.org/10.1016/B978-0-323-95504-1.01605-7" target="_blank">Tagging and Parsing</a>. <em>International Encyclopedia of Language and Linguistics</em> (3rd ed.).<br><span class="tag tag-chapter">Book chapter</span></li>
+              <li>Kyle, K., & <strong>Sung, H.</strong> (2026). <a href="https://doi.org/10.1016/B978-0-323-95504-1.01605-7" target="_blank">Tagging and Parsing</a>. <em>International Encyclopedia of Language and Linguistics</em> (3rd ed.).<br><span class="tag tag-chapter">Book chapter</span> <a class="tag request-link" href="https://www.researchgate.net/publication/401953546_Tagging_and_Parsing" target="_blank" rel="noopener noreferrer">Full access</a></li>
             </ul>
           </td>
         </tr>        
@@ -181,9 +208,9 @@
           <td>
             <ul>
               <li><strong>Sung, H.</strong>, & Kyle, K. (2025). <a href="https://aclanthology.org/2025.cxgsnlp-1.5/" target="_blank">ASC analyzer: A Python package for measuring argument structure construction usage in English texts</a>. In <em>Proceedings of the Second Workshop on Construction Grammars and NLP</em>, 41–49, Association for Computational Linguistics.<br><span class="tag tag-proc">Conference paper</span></li>
-              <li><strong>Sung, H.</strong>, & Shin, G-H. (2025). <a href="https://dl.acm.org/doi/10.1145/3767330" target="_blank">Towards robust morphosyntactic analysis of L2 Korean: Evaluating and fine-tuning a Korean language model</a>. <em>Transactions on Asian and Low-Resource Language Information Processing</em>.<br><span class="tag tag-journal">Journal article</span></li>
-              <li><strong>Sung, H.</strong>, & Wolf, MK., Suhan, M., & Kyle, K. (2025). <a href="https://doi.org/10.1016/j.asw.2025.100975" target="_blank">Lexical richness in young English learners’ writing: A focus on opinion and listen-write task types</a>. <em>Assessing Writing</em>.<br><span class="tag tag-journal">Journal article</span></li>
-              <li><strong>Sung, H.</strong>, & Kyle, K. (2025). <a href="https://doi.org/10.1017/S0272263125100995" target="_blank">Usage-based analysis of L2 oral proficiency: Characteristics of argument structure construction use</a>. <em>Studies in Second Language Acquisition</em>.<br><span class="tag tag-journal">Journal article</span></li>
+              <li><strong>Sung, H.</strong>, & Shin, G-H. (2025). <a href="https://dl.acm.org/doi/10.1145/3767330" target="_blank">Towards robust morphosyntactic analysis of L2 Korean: Evaluating and fine-tuning a Korean language model</a>. <em>Transactions on Asian and Low-Resource Language Information Processing</em>.<br><span class="tag tag-journal">Journal article</span> <span class="tag tag-oa">Open access</span></li>
+              <li><strong>Sung, H.</strong>, & Wolf, MK., Suhan, M., & Kyle, K. (2025). <a href="https://doi.org/10.1016/j.asw.2025.100975" target="_blank">Lexical richness in young English learners’ writing: A focus on opinion and listen-write task types</a>. <em>Assessing Writing</em>.<br><span class="tag tag-journal">Journal article</span> <a class="tag request-link" href="https://www.researchgate.net/publication/395463914_Lexical_richness_in_young_English_learners'_writing_A_focus_on_opinion_and_listen-write_task_types" target="_blank" rel="noopener noreferrer">Full access</a></li>
+              <li><strong>Sung, H.</strong>, & Kyle, K. (2025). <a href="https://doi.org/10.1017/S0272263125100995" target="_blank">Usage-based analysis of L2 oral proficiency: Characteristics of argument structure construction use</a>. <em>Studies in Second Language Acquisition</em>.<br><span class="tag tag-journal">Journal article</span> <a class="tag request-link" href="https://www.researchgate.net/publication/394298860_Usage-based_analysis_of_L2_oral_proficiency_Characteristics_of_argument_structure_construction_use" target="_blank" rel="noopener noreferrer">Full access</a></li>
               <li><strong>Sung, H.</strong>, Csuros, K., & Sung, M-C. (2025). <a href="https://aclanthology.org/2025.bea-1.2/" target="_blank">Comparing human and LLM proofreading in L2 writing: Impact on lexical and syntactic features</a>. In <em>Proceedings of the 20th Workshop on Innovative Use of NLP for Building Educational Applications</em>.<br><span class="tag tag-proc">Conference paper</span></li>
               <li><strong>Sung, H.</strong>, Shin, G-H., Lee, C., Sung, Y-K., & Jung, B-K. (2025). <a href="https://aclanthology.org/2025.law-1.9/" target="_blank">UD-KSL Treebank v1.3: A semi-automated framework for aligning XPOS-extracted units with UPOS tags</a>. In <em>Proceedings of the 19th Linguistic Annotation Workshop (LAW-XIX)</em>.<br><span class="tag tag-proc">Conference paper</span></li>
               <li><strong>Sung, H.</strong>, & Shin, G-H. (2025). <a href="https://aclanthology.org/2025.resourceful-1.4/" target="_blank">Second language Korean Universal Dependency treebank v1.2: Focus on data augmentation and annotation scheme refinement</a>. In <em>Proceedings of the Workshop on Resources and Representations for Under-Resourced Languages and Domains (RESOURCEFUL-2025)</em>.<br><span class="tag tag-proc">Conference paper</span></li>
@@ -197,7 +224,7 @@
               <li><strong>Sung, H.</strong>, & Kyle, K. (2024). <a href="https://aclanthology.org/2024.emnlp-main.415/" target="_blank">Leveraging pre-trained language models for linguistic analysis: A case of argument structure constructions</a>. In <em>the Association for Computational Linguistics: EMNLP 2024</em>.<br><span class="tag tag-proc">Conference paper</span></li>
               <li><strong>Sung, H.</strong>, & Shin, G-H. (2024). <a href="https://aclanthology.org/2024.lrec-main.332/" target="_blank">Constructing a dependency treebank for second language learners of Korean</a>. In <em>LREC-COLING 2024</em>.<br><span class="tag tag-proc">Conference paper</span></li>
               <li><strong>Sung, H.</strong>, & Kyle, K. (2024). <a href="https://aclanthology.org/2024.law-1.2/" target="_blank">Annotation scheme for English argument structure constructions treebank</a>. In <em>Proceedings of the 18th Linguistic Annotation Workshop (LAW-XVIII)</em>.<br><span class="tag tag-proc">Conference paper</span></li>
-              <li><strong>Sung, H.</strong>, Cho, S., & Kyle, K. (2024). <a href="https://doi.org/10.1080/15434303.2024.2311728" target="_blank">An empirical evaluation of lexical diversity indices in L2 Korean writing assessment</a>. <em>Language Assessment Quarterly</em>, 1-22.<br><span class="tag tag-journal">Journal article</span></li>
+              <li><strong>Sung, H.</strong>, Cho, S., & Kyle, K. (2024). <a href="https://doi.org/10.1080/15434303.2024.2311728" target="_blank">An empirical evaluation of lexical diversity indices in L2 Korean writing assessment</a>. <em>Language Assessment Quarterly</em>, 1-22.<br><span class="tag tag-journal">Journal article</span> <a class="tag request-link" href="https://www.researchgate.net/publication/378111524_An_Empirical_Evaluation_of_Lexical_Diversity_Indices_in_L2_Korean_Writing_Assessment" target="_blank" rel="noopener noreferrer">Full access</a></li>
             </ul>
           </td>
         </tr>
@@ -206,7 +233,7 @@
           <td>
             <ul>
               <li><strong>Sung, H.</strong>, & Shin, G-H. (2023). <a href="https://aclanthology.org/2023.findings-emnlp.767/" target="_blank">Diversifying language models for lesser-studied languages and language-usage contexts: A case of second language Korean</a>. In <em>Findings of the Association for Computational Linguistics: EMNLP 2023</em>.<br><span class="tag tag-proc">Conference paper</span></li>
-              <li>Kyle, K., <strong>Sung, H.</strong>, Eguchi, M., & Zenker, F. (2023). <a href="https://doi.org/10.1017/S0272263123000402" target="_blank">Evaluating evidence for the reliability and validity of lexical diversity indices in L2 oral task responses</a>. <em>Studies in Second Language Acquisition</em>, 1-22.<br><span class="tag tag-journal">Journal article</span></li>
+              <li>Kyle, K., <strong>Sung, H.</strong>, Eguchi, M., & Zenker, F. (2023). <a href="https://doi.org/10.1017/S0272263123000402" target="_blank">Evaluating evidence for the reliability and validity of lexical diversity indices in L2 oral task responses</a>. <em>Studies in Second Language Acquisition</em>, 1-22.<br><span class="tag tag-journal">Journal article</span> <a class="tag request-link" href="https://www.researchgate.net/publication/373531576_Evaluating_evidence_for_the_reliability_and_validity_of_lexical_diversity_indices_in_L2_oral_task_responses" target="_blank" rel="noopener noreferrer">Full access</a></li>
               <li><strong>Sung, H.</strong>, & Shin, G-H. (2023). <a href="https://aclanthology.org/2023.bea-1.6/" target="_blank">Towards L2-friendly pipelines for learner corpora: A case of written production by L2-Korean learners</a>. In <em>Proceedings of the 18th Workshop on Innovative Use of NLP for Building Educational Applications</em>, 72-82, Association for Computational Linguistics.<br><span class="tag tag-proc">Conference paper</span></li>
               <li>Kyle, K., & <strong>Sung, H.</strong> (2023). <a href="https://aclanthology.org/2023.cxgsnlp-1.7/" target="_blank">An argument structure construction treebank</a>. In <em>Proceedings of the Workshop on Construction Grammars and NLP</em>, 51–62, Association for Computational Linguistics.<br><span class="tag tag-proc">Conference paper</span></li>
             </ul>
