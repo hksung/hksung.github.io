@@ -116,6 +116,63 @@
       object-fit: cover; /* Ensures the image covers the area without distortion */
 
     }
+    /* Prospective students callout box (Hawaii Green Theme) */
+    .prospective-box {
+      margin-top: 35px;
+      margin-bottom: 25px;
+      padding: 18px 22px;
+      background: linear-gradient(135deg, rgba(235, 247, 238, 0.9), rgba(220, 244, 226, 0.7));
+      border: 1px solid #b7e4c7;
+      border-left: 5px solid #024731; /* UH Manoa Green */
+      border-radius: 8px;
+      font-family: "DM Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+    }
+
+    html[data-theme="dark"] .prospective-box {
+      background: linear-gradient(135deg, rgba(2, 71, 49, 0.25), rgba(4, 50, 36, 0.2));
+      border-color: rgba(82, 183, 136, 0.35);
+      border-left-color: #52b788;
+    }
+
+    .prospective-box h3 {
+      font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12pt;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: #024731 !important;
+      border-bottom: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    html[data-theme="dark"] .prospective-box h3 {
+      color: #74c69d !important;
+    }
+
+    .prospective-box p, .prospective-box ul {
+      margin-bottom: 8px;
+    }
+
+    .prospective-box table {
+      margin-top: 8px;
+      font-size: 10.5pt;
+    }
+
+    .prospective-box table th {
+      color: #024731 !important;
+      font-weight: 700;
+      font-family: "Roboto Mono", monospace;
+      font-size: 9.5pt;
+    }
+
+    html[data-theme="dark"] .prospective-box table th {
+      color: #74c69d !important;
+    }
+
     /* Change all hyperlinked text color */
     a {
       color: #3743e8; /* Replace with your desired color */
@@ -220,18 +277,53 @@
     <div>
       <h2 id="interests" style="color:#3a5e89;">About Me</h2>
       <p>
-      I am an Assistant Professor in the Department of <a href="https://manoa.hawaii.edu/sls/" target="_blank">Second Language Studies</a> at the University of Hawaiʻi at Mānoa. I study how second language learners use words and grammatical structures at different levels of proficiency. More broadly, I hope to contribute to the development and validation of empirical measures for learner corpus research. To do this, I use natural language processing to extract and quantify linguistic features from learner corpora, while also building, documenting, and publicly releasing related resources.</br></br>
-      
-      My work has so far focused on learners of English and Korean, and I would be happy to talk with students and researchers interested in similar questions involving these or other learner populations.
+      I am an Assistant Professor in the Department of <a href="https://manoa.hawaii.edu/sls/" target="_blank">Second Language Studies</a> at the University of Hawaiʻi at Mānoa. I study how second language learners use words and grammatical structures at different levels of proficiency. More broadly, I hope to contribute to the development and validation of empirical measures for learner corpus research. To do this, I use natural language processing to extract and quantify linguistic features from learner corpora, while also building, documenting, and publicly releasing related resources.</br>
       </p>
     </div>
 
-    <h2 id="education"; style="color:#3a5e89;">Education</h2>
-    <p><ul>
-    <li><strong>University of Oregon</strong>, PhD in Linguistics and MS in Computer Science, 2021.9–2025.6</li>
-    <li><strong>Seoul National University</strong>, MA in English Language Education, 2016.3-2018.2</li>
-    <li><strong>Ewha Womans University</strong>, BA in English Language and Literature, 2011.3-2016.2</li>
+    <div class="prospective-box" id="prospective-students">
+      <h3>📣 PhD Student Recruitment (Fall 2027)</h3>
+      <p>
+      I am looking to work with one PhD student beginning in Fall 2027. Potential research topics include, but are not limited to:
       </p>
+      <ul style="margin-bottom: 12px;">
+        <li>Corpus-based analysis of learner language</li>
+        <li>Multilingual research on NLP and language models</li>
+        <li>Usage-based approaches to second language development</li>
+      </ul>
+      <p>
+      Candidates with a master’s degree in a language-related field and some training in quantitative research methods would be a good fit for this position. If you are considering applying and would like to discuss potential research fit, please feel free to email me.
+      </p>
+      <table style="margin-top: 10px;">
+        <tbody>
+          <tr>
+            <th style="padding-right: 1rem; vertical-align: top; white-space: nowrap;">Position</th>
+            <td>4 years of support (through a Graduate Assistantship)</td>
+          </tr>
+          <tr>
+            <th style="padding-right: 1rem; vertical-align: top; white-space: nowrap;">Start date</th>
+            <td>August 2027</td>
+          </tr>
+          <tr>
+            <th style="padding-right: 1rem; vertical-align: top; white-space: nowrap;">Application deadline</th>
+            <td>January 1, 2027</td>
+          </tr>
+          <tr>
+            <th style="padding-right: 1rem; vertical-align: top; white-space: nowrap;">More info</th>
+            <td><a href="https://manoa.hawaii.edu/graduate/second-language-studies/" target="_blank">UH Mānoa SLS Graduate Program</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <h2 id="education" style="color:#3a5e89;">Education</h2>
+      <ul style="margin-top: 5px;">
+        <li><strong>University of Oregon</strong>, PhD in Linguistics and MS in Computer Science, 2021.9–2025.6</li>
+        <li><strong>Seoul National University</strong>, MA in English Language Education, 2016.3-2018.2</li>
+        <li><strong>Ewha Womans University</strong>, BA in English Language and Literature, 2011.3-2016.2</li>
+      </ul>
+    </div>
 
     <h2 id="skills-certifications" style="color:#3a5e89;">Misc.</h2>
     <table>
@@ -253,8 +345,8 @@
           </td>
         </tr>
         <tr>
-          <th style="padding-right: 1rem; vertical-align: top;">Treebanks</th>
-          <td>
+          <th style="padding-right: 1rem; padding-bottom: 0.5rem; vertical-align: top;">Treebanks</th>
+          <td style="padding-bottom: 4rem;">
             <ul class="no-marker" style="list-style:none; padding:0; margin:0;">
               <li><a href="https://github.com/LCR-ADS-Lab/ASC-Treebank" target="_blank">ASC treebank</a>, <a href="https://github.com/UniversalDependencies/UD_Korean-KSL/tree/dev" target="_blank">UD KSL treebank</a></li>
             </ul>
